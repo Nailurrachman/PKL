@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;
+
 
 class pegawai extends Model
 {
@@ -17,6 +19,7 @@ class pegawai extends Model
         'nip_baru',
         'nik',
         'id_tempat_lahir',
+        'status_pegawai',
         'tanggal_lahir_date',
         'id_gol_ru',
         'tmt_gol_date',
@@ -64,5 +67,9 @@ class pegawai extends Model
     public function satker()
     {
         return $this->belongsTo(Satker::class, 'satker_id');
+    }
+    public function getUmurAttribute()
+    {
+        return Carbon::parse($this->tanggal_lahir)->age;
     }
 }

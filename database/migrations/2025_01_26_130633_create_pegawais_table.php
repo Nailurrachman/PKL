@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('nip_lama', 18)->nullable();
             $table->string('nip_baru', 18)->unique();
             $table->string('nik', 16)->unique();
+            $table->enum('status_pegawai', ['aktif', 'pensiun', 'mutasi']);
             $table->unsignedBigInteger('id_tempat_lahir');
             $table->date('tanggal_lahir_date');
             $table->unsignedBigInteger('id_gol_ru');

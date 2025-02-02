@@ -15,7 +15,6 @@ return new class extends Migration
     {
         Schema::create('satker', function (Blueprint $table) {
             $table->id();
-            $table->string('nip_baru')->unique()->nullable();
             $table->string('nama');
             $table->string('alamat');
             $table->string('email');

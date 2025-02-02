@@ -23,10 +23,6 @@ class UnitKerjaResource extends Resource
     {
         return $form
             ->schema([
-            Forms\Components\TextInput::make('nip_baru')
-                ->label('Nip_Baru')
-                ->unique()
-                ->required(),
             Forms\Components\TextInput::make('nama')
                 ->required(),
             Forms\Components\TextInput::make('alamat')
@@ -40,9 +36,6 @@ class UnitKerjaResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('nip_baru')
-                ->label('Nip_Baru')
-                ->sortable(),
                 Tables\Columns\TextColumn::make('nama'),
                 Tables\Columns\TextColumn::make('alamat'),
                 Tables\Columns\TextColumn::make('email'),

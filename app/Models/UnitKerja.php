@@ -10,7 +10,6 @@ class UnitKerja extends Model
     use HasFactory;
     protected $table = 'unit_kerja';
     protected $fillable = [
-        'nip_baru',
         'nama',
         'alamat',
         'email'

@@ -23,10 +23,6 @@ class JabatanResource extends Resource
     {
         return $form
             ->schema([
-            Forms\Components\TextInput::make('nip_baru')
-                ->label('Nip_Baru')
-                ->unique()
-                ->required(),
             Forms\Components\TextInput::make('nama_Jabatan')
                 ->required(),
             Forms\Components\Select::make('kelas_jabatan_grade')
@@ -58,9 +54,6 @@ class JabatanResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('id'),
-                Tables\Columns\TextColumn::make('nip_baru')
-                    ->label('Nip_Baru')
-                    ->sortable(),
                 Tables\Columns\TextColumn::make('nama_Jabatan'),
                 Tables\Columns\TextColumn::make('kelas_jabatan_grade')
                     ->label("Kelas Jabatan Grade")

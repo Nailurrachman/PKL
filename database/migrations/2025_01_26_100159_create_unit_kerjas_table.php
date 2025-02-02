@@ -15,7 +15,6 @@ return new class extends Migration
     {
         Schema::create('unit_kerja', function (Blueprint $table) {
             $table->id();
-            $table->string('nip_baru')->unique()->nullable();
             $table->string('nama', 100);
             $table->string('alamat', 255);
             $table->string('email', 100);
