@@ -49,14 +49,15 @@
                     </div>
                     <div class="flex justify-between border-b pb-2">
                         <span class="font-medium text-gray-600">Tanggal Lahir</span>
-                        <span>{{ $record->tanggal_lahir_date }}</span>
+                        <span>{{ \Carbon\Carbon::parse($record->tanggal_lahir_date)->translatedFormat('d F Y') }}</span>
                     </div>
+
                     <div class="flex justify-between border-b pb-2">
-    <span class="font-medium text-gray-600">Umur</span>
-    <div class="text-right">
-        <span>{{ \Carbon\Carbon::parse($record->tanggal_lahir_date)->age }} Tahun</span>
-    </div>
-</div>
+                        <span class="font-medium text-gray-600">Umur</span>
+                        <div class="text-right">
+                            <span>{{ \Carbon\Carbon::parse($record->tanggal_lahir_date)->age }} Tahun</span>
+                        </div>
+                    </div>
                     <div class="flex justify-between border-b pb-2">
                         <span class="font-medium text-gray-600">Jumlah Istri/Suami</span>
                         <span>{{ $record->jumlah_istri_suami }}</span>
